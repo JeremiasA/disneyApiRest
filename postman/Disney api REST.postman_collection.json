@@ -1,0 +1,1605 @@
+{
+	"info": {
+		"_postman_id": "6e9282b1-6d2e-4f39-99b1-b895dde9b1b7",
+		"name": "Disney api REST",
+		"description": "# Introduction\nThis api allows to explore the world of Disney. Allow knowing and modifying the characters that compose it and knowing in which movies they participated.\n\n# Overview\nUsed JSON format to send and receive data\n\n# Authentication\nRegister and login provides an access token valid for one hour. \n\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Mickel078\",\r\n    \"password\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						},
+						"description": "User login. Returns a token valid for 1 hour. Then you must login again."
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Mickel078\",\r\n    \"password\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-RUKOqNeuIAo0k15Hu9cOGSzJFF4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 08:23:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk4NjEwMDEsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk4NTc0MDF9.YjpcsHfgI8AIuXk8iJ-78ZcbPZzmmcSNC8ehLZ1XhuI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Mickel078\",\r\n    \"email\": \"mickel078@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						},
+						"description": "User registration. Returns a token valid for 1 hour. Then you must login again."
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Mickel078\",\r\n    \"email\": \"mickel078@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b4-stpBdB/sVXSZb7l8gN1oX6KJKkw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 08:22:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk4NjA5NzMsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk4NTczNzN9.MO548Sg8uKfv2mofO1DW6loWvrEV5Yv8ZfjyyPJV650\",\n    \"user\": \"Mickel078\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Films services",
+			"item": [
+				{
+					"name": "List Films",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/films",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"films"
+							]
+						},
+						"description": "- Return all films: title, creation date and image of all Disney films in database.\npath: /api/v1/films\n\n- Return film details : return all details of one film selected by name.\nexample path: /api/v1/films?id=Pinocchio\n\n- Filter films by genre: Return all films of specified genre.\nexample path: /api/v1/films?genre=Fantasy\n\n- Order by date: Order all films by ascendet or descendet creation date.\nascendent: /api/v1/films?date=asc\ndescendent: /api/v1/films?date=desc"
+					},
+					"response": [
+						{
+							"name": "Return all films",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "526"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20e-QH6fbN7yug37Xe8hACIu9kwdRV8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:35:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"films\": [\n        {\n            \"title\": \"Toy Story 2\",\n            \"creationdate\": \"1999-11-24\",\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Toy_Story_2_logo.svg/330px-Toy_Story_2_logo.svg.png\"\n        },\n        {\n            \"title\": \"Toy Story 3\",\n            \"creationdate\": \"2010-06-18\",\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Toy_Stoy_3_logo.svg/330px-Toy_Stoy_3_logo.svg.png\"\n        },\n        {\n            \"title\": \"Aladdin\",\n            \"creationdate\": \"1992-04-15\",\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aladdin-logo-2.svg/300px-Aladdin-logo-2.svg.png\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Return film details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films?title=Toy Story 2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "Toy Story 2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"121-AH5UAl4/o1U/6egrwglu//62Meo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:35:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"film\": {\n        \"id\": 8,\n        \"title\": \"Toy Story 2\",\n        \"genre\": \"Animation\",\n        \"creationdate\": \"1999-11-24\",\n        \"calification\": 4,\n        \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Toy_Story_2_logo.svg/330px-Toy_Story_2_logo.svg.png\",\n        \"characters\": [\n            \"Buzz Lightyear\",\n            \"Woody\",\n            \"Jessie\",\n            \"Rex\",\n            \"Hamm\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "Filter By Genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films?genre=Animation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films"
+									],
+									"query": [
+										{
+											"key": "genre",
+											"value": "Animation"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "608"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"260-/GJbvCwUuuJm+mNOD2yq+ZTQ1Dc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:36:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"films\": {\n        \"Toy Story 2\": {\n            \"id\": 8,\n            \"title\": \"Toy Story 2\",\n            \"genre\": \"Animation\",\n            \"creationdate\": \"1999-11-24\",\n            \"calification\": 4,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Toy_Story_2_logo.svg/330px-Toy_Story_2_logo.svg.png\",\n            \"characters\": [\n                \"Buzz Lightyear\",\n                \"Woody\",\n                \"Jessie\",\n                \"Rex\",\n                \"Hamm\"\n            ]\n        },\n        \"Toy Story 3\": {\n            \"id\": 9,\n            \"title\": \"Toy Story 3\",\n            \"genre\": \"Animation\",\n            \"creationdate\": \"2010-06-18\",\n            \"calification\": 5,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Toy_Stoy_3_logo.svg/330px-Toy_Stoy_3_logo.svg.png\",\n            \"characters\": [\n                \"Buzz Lightyear\",\n                \"Woody\",\n                \"Jessie\",\n                \"Rex\",\n                \"Hamm\",\n                \"Slinky\"\n            ]\n        }\n    }\n}"
+						},
+						{
+							"name": "Order By ASC date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films?date=asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "879"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36f-a9uD3hNMz08i1SCsoxQY8tTU/fA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:36:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"films\": {\n        \"Aladdin\": {\n            \"id\": 10,\n            \"title\": \"Aladdin\",\n            \"genre\": \"Adventure\",\n            \"creationdate\": \"1992-04-15\",\n            \"calification\": 3,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aladdin-logo-2.svg/300px-Aladdin-logo-2.svg.png\",\n            \"characters\": [\n                \"Aladdin\",\n                \"Jasmine\",\n                \"Jafar\",\n                \"Abu\"\n            ]\n        },\n        \"Toy Story 2\": {\n            \"id\": 8,\n            \"title\": \"Toy Story 2\",\n            \"genre\": \"Animation\",\n            \"creationdate\": \"1999-11-24\",\n            \"calification\": 4,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Toy_Story_2_logo.svg/330px-Toy_Story_2_logo.svg.png\",\n            \"characters\": [\n                \"Buzz Lightyear\",\n                \"Woody\",\n                \"Jessie\",\n                \"Rex\",\n                \"Hamm\"\n            ]\n        },\n        \"Toy Story 3\": {\n            \"id\": 9,\n            \"title\": \"Toy Story 3\",\n            \"genre\": \"Animation\",\n            \"creationdate\": \"2010-06-18\",\n            \"calification\": 5,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Toy_Stoy_3_logo.svg/330px-Toy_Stoy_3_logo.svg.png\",\n            \"characters\": [\n                \"Buzz Lightyear\",\n                \"Woody\",\n                \"Jessie\",\n                \"Rex\",\n                \"Hamm\",\n                \"Slinky\"\n            ]\n        }\n    }\n}"
+						},
+						{
+							"name": "Order By DESC date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films?date=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "879"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36f-nOcyoXPUf9EQxYGebFickyF6Rf4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:37:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"films\": {\n        \"Toy Story 3\": {\n            \"id\": 9,\n            \"title\": \"Toy Story 3\",\n            \"genre\": \"Animation\",\n            \"creationdate\": \"2010-06-18\",\n            \"calification\": 5,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Toy_Stoy_3_logo.svg/330px-Toy_Stoy_3_logo.svg.png\",\n            \"characters\": [\n                \"Buzz Lightyear\",\n                \"Woody\",\n                \"Jessie\",\n                \"Rex\",\n                \"Hamm\",\n                \"Slinky\"\n            ]\n        },\n        \"Toy Story 2\": {\n            \"id\": 8,\n            \"title\": \"Toy Story 2\",\n            \"genre\": \"Animation\",\n            \"creationdate\": \"1999-11-24\",\n            \"calification\": 4,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Toy_Story_2_logo.svg/330px-Toy_Story_2_logo.svg.png\",\n            \"characters\": [\n                \"Buzz Lightyear\",\n                \"Woody\",\n                \"Jessie\",\n                \"Rex\",\n                \"Hamm\"\n            ]\n        },\n        \"Aladdin\": {\n            \"id\": 10,\n            \"title\": \"Aladdin\",\n            \"genre\": \"Adventure\",\n            \"creationdate\": \"1992-04-15\",\n            \"calification\": 3,\n            \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aladdin-logo-2.svg/300px-Aladdin-logo-2.svg.png\",\n            \"characters\": [\n                \"Aladdin\",\n                \"Jasmine\",\n                \"Jafar\",\n                \"Abu\"\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add New Film",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Aladdin\",\r\n    \"genre\": \"Adventure\",\r\n    \"calification\": \"3\",\r\n    \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aladdin-logo-2.svg/300px-Aladdin-logo-2.svg.png\",\r\n    \"characters\": [\"Aladdin\", \"Jasmine\" , \"Jafar\", \"Abu\"],\r\n    \"creationdate\":\"1992-04-15\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/films/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"films",
+								""
+							]
+						},
+						"description": "Add new film to database. Use Json format to specify: title, genre, characters[], calification, creationdate and imageurl of new film."
+					},
+					"response": [
+						{
+							"name": "Add New Film",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Aladdin\",\r\n    \"genre\": \"Adventure\",\r\n    \"calification\": \"3\",\r\n    \"imageurl\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aladdin-logo-2.svg/300px-Aladdin-logo-2.svg.png\",\r\n    \"characters\": [\"Aladdin\", \"Jasmine\" , \"Jafar\", \"Abu\"],\r\n    \"creationdate\":\"1992-04-15\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-TCRSMhTjwP1/ajwnc9wqsxi4meA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:25:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New film added!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Film",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \r\n    \"characters\": [\r\n            \"Buzz Lightyear\",\r\n            \"Woody\",\r\n            \"Jessie\",\r\n            \"Rex\",\r\n            \"Hamm\"\r\n        ]\r\n }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/films/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"films",
+								"8"
+							]
+						},
+						"description": "Update a film from database. Use Json format to specify: the properties you want to change.\npath: /api/v1/films/1"
+					},
+					"response": [
+						{
+							"name": "Update Film",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \r\n    \"characters\": [\r\n            \"Buzz Lightyear\",\r\n            \"Woody\",\r\n            \"Jessie\",\r\n            \"Rex\",\r\n            \"Hamm\"\r\n        ]\r\n }"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-7NNkwsnr6O8/digluswkOS993n0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:11:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Film with id 8 updated!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Film",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/films/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"films",
+								"7"
+							]
+						},
+						"description": "Delete film of database with id. \nexample path: /api/v1/films/1"
+					},
+					"response": [
+						{
+							"name": "Delete Film",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk4NTc0ODksImRhdGEiOnsiaWQiOjF9LCJpYXQiOjE2MTk4NTM4ODl9.KJ2cmvb39acmpVfDKp6BMv2klQIoL5YeZKbnwMfDrfY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/films/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"films",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-aAUUteDih3K6ej+7mMFMMemgF4E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 08:17:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Film with id 4 and title Modified Pinocchio was deleted!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Characters services",
+			"item": [
+				{
+					"name": "List Characters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTkzMDksImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTU3MDl9.aPb50mbEUU7yheXuQqMssqb_fZ96GLMg1lf2-oCGAqU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/characters?film=Aladdin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"characters"
+							],
+							"query": [
+								{
+									"key": "film",
+									"value": "Aladdin"
+								}
+							]
+						},
+						"description": "- Return all characters: return name and image of all Disney characters in database.\npath: /api/v1/characters\n\n- Return character details : return all details of one character selected by name.\nexample path: /api/v1/character?name=Pinocchio\n\n- Filter characters by age: Return all characters with specified range of ages.\nmax and min: /api/v1/characters?minage=4&maxage=18\nonly max age = /api/v1/characters?maxage=18\nonly min age = /api/v1/characters?minage=4\n\n- Filter characters by weigth: Return all characters with specified range of weigth.\nmax and min: /api/v1/characters?minweigth=4&maxweigth=18\nonly max weigth = /api/v1/characters?maxweigth=18\nonly min weigth = /api/v1/characters?minweigth=4\n\n- Filter characters by film: return all charaters of a specified film.\nexample: /api/v1/characters?film=Pinocchio"
+					},
+					"response": [
+						{
+							"name": "Return all characters",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1527"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f7-MBM7wT0jYBDzUz2+HtHbgNCI4a8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:40:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"foundCharacters\": [\n        {\n            \"name\": \"Buzz Lightyear\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/7/74/Profile_-_Buzz_Lightyear.jpeg/revision/latest?cb=20190623020017\"\n        },\n        {\n            \"name\": \"Woody\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/a/ab/Woody_4.png/revision/latest?cb=20161125135228&path-prefix=es\"\n        },\n        {\n            \"name\": \"Jessie\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/d/de/Jessie_TS.png/revision/latest/top-crop/width/360/height/450?cb=20171109230753&path-prefix=es\"\n        },\n        {\n            \"name\": \"Rex\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/5/5f/Rex.png/revision/latest/scale-to-width-down/244?cb=20140112132355&path-prefix=es\"\n        },\n        {\n            \"name\": \"Hamm\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/0/01/Hamm.png/revision/latest/scale-to-width-down/325?cb=20130302193251&path-prefix=es\"\n        },\n        {\n            \"name\": \"Slinky\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/4/4b/Slinky.jpg/revision/latest/scale-to-width-down/234?cb=20110309142111&path-prefix=es\"\n        },\n        {\n            \"name\": \"Aladdin\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/8/85/Aladdin_%28personaje%29.png/revision/latest/scale-to-width-down/358?cb=20160318010334&path-prefix=es\"\n        },\n        {\n            \"name\": \"Jasmine\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/9/90/Princesa_Jasm%C3%ADn.png/revision/latest/scale-to-width-down/262?cb=20140123205846&path-prefix=es\"\n        },\n        {\n            \"name\": \"Jafar\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/5/56/Jafar.png/revision/latest/scale-to-width-down/310?cb=20130320172756&path-prefix=es\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Return character details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters?name=Aladdin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Aladdin"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-H/ZOUm9W+kVbCA75jsuln/Rx7hY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:40:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"character\": {\n        \"id\": 9,\n        \"name\": \"Aladdin\",\n        \"age\": 16,\n        \"weigth\": 46,\n        \"story\": \"Aladdin is a poor young man who, together with his monkey Abu, is dedicated to stealing and deceiving the people of Agrabah in order to survive.\",\n        \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/8/85/Aladdin_%28personaje%29.png/revision/latest/scale-to-width-down/358?cb=20160318010334&path-prefix=es\",\n        \"films\": [\n            \"Aladdin\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "Filter by age",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters?minage=4&maxage=18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters"
+									],
+									"query": [
+										{
+											"key": "minage",
+											"value": "4"
+										},
+										{
+											"key": "maxage",
+											"value": "18"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1867"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74b-lAQEWyNm12651Fq+JZAMd0zFy8U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:41:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"characters\": {\n        \"Buzz Lightyear\": {\n            \"id\": 3,\n            \"name\": \"Buzz Lightyear\",\n            \"age\": 7,\n            \"weigth\": 6,\n            \"story\": \"Take on the role of a toy space superhero and an action figure. Along with Woody , he is one of the two main characters in all four Toy Story films.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/7/74/Profile_-_Buzz_Lightyear.jpeg/revision/latest?cb=20190623020017\",\n            \"films\": [\n                \"Toy Story 2\",\n                \"Toy Story 3\"\n            ]\n        },\n        \"Woody\": {\n            \"id\": 4,\n            \"name\": \"Woody\",\n            \"age\": 9,\n            \"weigth\": 7,\n            \"story\": \"Woody is a cowboy doll. His voice box that is activated by a pull cord with which he is able to say many simple phrases'.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/a/ab/Woody_4.png/revision/latest?cb=20161125135228&path-prefix=es\",\n            \"films\": [\n                \"Toy Story 2\",\n                \"Toy Story 3\"\n            ]\n        },\n        \"Jessie\": {\n            \"id\": 5,\n            \"name\": \"Jessie\",\n            \"age\": 12,\n            \"weigth\": 3,\n            \"story\": \"She is a very rare toy, model of a character from the fictional television series.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/d/de/Jessie_TS.png/revision/latest/top-crop/width/360/height/450?cb=20171109230753&path-prefix=es\",\n            \"films\": [\n                \"Toy Story 2\",\n                \"Toy Story 3\"\n            ]\n        },\n        \"Aladdin\": {\n            \"id\": 9,\n            \"name\": \"Aladdin\",\n            \"age\": 16,\n            \"weigth\": 46,\n            \"story\": \"Aladdin is a poor young man who, together with his monkey Abu, is dedicated to stealing and deceiving the people of Agrabah in order to survive.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/8/85/Aladdin_%28personaje%29.png/revision/latest/scale-to-width-down/358?cb=20160318010334&path-prefix=es\",\n            \"films\": [\n                \"Aladdin\"\n            ]\n        },\n        \"Jasmine\": {\n            \"id\": 10,\n            \"name\": \"Jasmine\",\n            \"age\": 14,\n            \"weigth\": 38,\n            \"story\": \"She is the daughter of the Sultan , who has issued, by law, that she must choose a husband (a prince) to marry.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/9/90/Princesa_Jasm%C3%ADn.png/revision/latest/scale-to-width-down/262?cb=20140123205846&path-prefix=es\",\n            \"films\": [\n                \"Aladdin\"\n            ]\n        }\n    }\n}"
+						},
+						{
+							"name": "Filter by weigth",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTkzMDksImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTU3MDl9.aPb50mbEUU7yheXuQqMssqb_fZ96GLMg1lf2-oCGAqU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters?minweigth=4&maxweigth=18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters"
+									],
+									"query": [
+										{
+											"key": "minweigth",
+											"value": "4"
+										},
+										{
+											"key": "maxweigth",
+											"value": "18"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1536"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"600-nQkDqt0XwuAYZlaQrP6ceLS2bzk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:42:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"characters\": {\n        \"Buzz Lightyear\": {\n            \"id\": 3,\n            \"name\": \"Buzz Lightyear\",\n            \"age\": 7,\n            \"weigth\": 6,\n            \"story\": \"Take on the role of a toy space superhero and an action figure. Along with Woody , he is one of the two main characters in all four Toy Story films.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/7/74/Profile_-_Buzz_Lightyear.jpeg/revision/latest?cb=20190623020017\",\n            \"films\": [\n                \"Toy Story 2\",\n                \"Toy Story 3\"\n            ]\n        },\n        \"Woody\": {\n            \"id\": 4,\n            \"name\": \"Woody\",\n            \"age\": 9,\n            \"weigth\": 7,\n            \"story\": \"Woody is a cowboy doll. His voice box that is activated by a pull cord with which he is able to say many simple phrases'.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/a/ab/Woody_4.png/revision/latest?cb=20161125135228&path-prefix=es\",\n            \"films\": [\n                \"Toy Story 2\",\n                \"Toy Story 3\"\n            ]\n        },\n        \"Rex\": {\n            \"id\": 6,\n            \"name\": \"Rex\",\n            \"age\": 100,\n            \"weigth\": 14,\n            \"story\": \"Rex is a large, green, plastic toy tyrannosaurus . Rex suffers from anxiety, an inferiority complex, and the worry that he's not scary enough.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/5/5f/Rex.png/revision/latest/scale-to-width-down/244?cb=20140112132355&path-prefix=es\",\n            \"films\": [\n                \"Toy Story 2\",\n                \"Toy Story 3\"\n            ]\n        },\n        \"Slinky\": {\n            \"id\": 8,\n            \"name\": \"Slinky\",\n            \"age\": 2,\n            \"weigth\": 13,\n            \"story\": \"Slinky is a toy that is half dog and half spring. Slinky has the head, neck and front legs of a dog and the attachment to its other part is a spring.\",\n            \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/4/4b/Slinky.jpg/revision/latest/scale-to-width-down/234?cb=20110309142111&path-prefix=es\",\n            \"films\": [\n                \"Toy Story 3\"\n            ]\n        }\n    }\n}"
+						},
+						{
+							"name": "Find by film",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTkzMDksImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTU3MDl9.aPb50mbEUU7yheXuQqMssqb_fZ96GLMg1lf2-oCGAqU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters?film=Aladdin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters"
+									],
+									"query": [
+										{
+											"key": "film",
+											"value": "Aladdin"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-Z7tRe+EcBOahrn3FoMxBE4p8KC0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:42:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"film\": \"Aladdin\",\n    \"characters\": [\n        \"Aladdin\",\n        \"Jasmine\",\n        \"Jafar\",\n        \"Abu\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add New Character",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jafar\",\r\n    \"age\": 48,\r\n    \"weigth\" : 75,\r\n    \"story\" : \"Jafar is generally somewhat comical and daring, even in his evil and cunning days.\",\r\n    \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/5/56/Jafar.png/revision/latest/scale-to-width-down/310?cb=20130320172756&path-prefix=es\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"characters"
+							]
+						},
+						"description": "Add new character to database. Use Json format to specify: name, age, weigth, story and image url of new character."
+					},
+					"response": [
+						{
+							"name": "Add New Character",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jafar\",\r\n    \"age\": 48,\r\n    \"weigth\" : 75,\r\n    \"story\" : \"Jafar is generally somewhat comical and daring, even in his evil and cunning days.\",\r\n    \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/5/56/Jafar.png/revision/latest/scale-to-width-down/310?cb=20130320172756&path-prefix=es\"\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-wCWkBX0pSQeusYpRLj6qt3mk4eg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 May 2021 11:31:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Character created!\",\n    \"character\": {\n        \"id\": 11,\n        \"name\": \"Jafar\",\n        \"age\": 48,\n        \"weigth\": 75,\n        \"story\": \"Jafar is generally somewhat comical and daring, even in his evil and cunning days.\",\n        \"imageurl\": \"https://static.wikia.nocookie.net/disney/images/5/56/Jafar.png/revision/latest/scale-to-width-down/310?cb=20130320172756&path-prefix=es\",\n        \"updatedAt\": \"2021-05-02T11:31:31.796Z\",\n        \"createdAt\": \"2021-05-02T11:31:31.796Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Character",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk4NTk3NDEsImRhdGEiOnsiaWQiOjF9LCJpYXQiOjE2MTk4NTYxNDF9.Yx_OIOpeAz6X5RKCfdMuU4xYHV5mnSxEaEqeUZ4bE9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 13,\r\n    \"weigth\": 18\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/characters/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"characters",
+								"1"
+							]
+						},
+						"description": "Update a character from database. Use Json format to specify: the properties you want to change.\nexample path: /api/v1/characters/2"
+					},
+					"response": [
+						{
+							"name": "Update Character",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk4NTk3NDEsImRhdGEiOnsiaWQiOjF9LCJpYXQiOjE2MTk4NTYxNDF9.Yx_OIOpeAz6X5RKCfdMuU4xYHV5mnSxEaEqeUZ4bE9k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"age\": 13,\r\n    \"weigth\": 18\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-yVFmNouOSoevZ9KFNMdbjITYnjc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 08:06:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Character with id 1 updated!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Character",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk5NTU2NzYsImRhdGEiOnsiaWQiOjJ9LCJpYXQiOjE2MTk5NTIwNzZ9.JcRLGKlPkjsGVbubFfP-pkxZobsbQ5YgJvr2CfUdwkI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/characters/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"characters",
+								"1"
+							]
+						},
+						"description": "Delete character of database with id. \nexample path: /api/v1/characters/1"
+					},
+					"response": [
+						{
+							"name": "Delete Character",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk4NTc0ODksImRhdGEiOnsiaWQiOjF9LCJpYXQiOjE2MTk4NTM4ODl9.KJ2cmvb39acmpVfDKp6BMv2klQIoL5YeZKbnwMfDrfY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/characters/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-k5No3oP9zsUGhmE0R1bC4Fy11vs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 08:12:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Character with id '2' and name 'Mickey' was deleted!\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
